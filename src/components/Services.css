@@ -1,0 +1,163 @@
+/* src/components/Services/Services.css - THE FINAL, PIXEL-PERFECT VERSION */
+
+.services-container {
+  margin-top: 30px;
+  border: 1px solid #EAEAEA;
+  border-radius: 12px;
+  padding: 12px; /* Padding for the outer container */
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.05);
+  background-color: #fff;
+}
+
+.services-tabs {
+  display: flex;
+  background-color: #f8f9fa;
+  border-radius: 12px;
+  padding: 8px;
+  margin-bottom: 20px;
+}
+
+.service-tab-btn {
+  flex: 1;
+  padding: 10px;
+  border: none;
+  background: transparent;
+  border-radius: 8px;
+  font-size: 15px;
+  font-weight: 500;
+  cursor: pointer;
+  color: #555;
+  transition: all 0.2s ease-in-out;
+  display: flex;
+  flex-direction: column; /* To stack icon and text */
+  align-items: center;
+  gap: 8px;
+}
+/* Style for the SVG icons inside the buttons */
+.service-tab-btn svg {
+  width: 24px;
+  height: 24px;
+  stroke: #555;
+  transition: all 0.2s ease-in-out;
+}
+
+.service-tab-btn.active {
+  background-color: #fff;
+  color: #00A3AD;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+  border-bottom: 2px solid #00A3AD; /* The teal underline */
+}
+.service-tab-btn.active svg {
+  stroke: #00A3AD;
+}
+    
+.service-image {
+  width: 100%;
+  height: 250px;
+  object-fit: cover;
+  border-radius: 12px;
+  margin-bottom: 25px;
+}
+
+.service-options-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 15px;
+}
+
+.service-option {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  background-color: #fff;
+  padding: 12px;
+  border-radius: 8px;
+  font-size: 15px;
+  color: #333;
+  border: 1px solid #eee;
+}
+
+.check-icon {
+  width: 18px;
+  height: 18px;
+  stroke: #00A3AD;
+}
+
+.tab-icon {
+  width: 24px;
+  height: 24px;
+  object-fit: contain;
+  transition: transform 0.2s ease-in-out;
+}
+
+.service-tab-btn.active .tab-icon {
+  filter: brightness(0) saturate(100%) invert(45%) sepia(78%) saturate(265%) hue-rotate(137deg) brightness(92%) contrast(91%);
+}
+
+
+@media (max-width: 768px) {
+  .services-tabs {
+    flex-wrap: wrap;
+    justify-content: space-between;
+    gap: 8px;
+  }
+
+  .service-tab-btn {
+    flex: 1 1 48%;
+    font-size: 14px;
+    padding: 8px;
+    gap: 6px;
+  }
+
+  .service-image {
+    height: 200px;
+    margin-bottom: 20px;
+  }
+
+  .service-options-grid {
+    grid-template-columns: 1fr;
+    gap: 12px;
+  }
+
+  .service-option {
+    font-size: 14px;
+    padding: 10px;
+    gap: 8px;
+  }
+
+  .check-icon {
+    width: 16px;
+    height: 16px;
+  }
+
+  .tab-icon {
+    width: 20px;
+    height: 20px;
+  }
+}
+
+@media (max-width: 480px) {
+  .services-container {
+    padding: 10px;
+  }
+
+  .service-tab-btn {
+    flex: 1 1 100%;
+    font-size: 13px;
+    gap: 4px;
+  }
+
+  .service-image {
+    height: 180px;
+  }
+
+  .service-option {
+    font-size: 13px;
+    padding: 8px;
+  }
+
+  .tab-icon {
+    width: 18px;
+    height: 18px;
+  }
+}

@@ -1,0 +1,85 @@
+.concierge-container { background: #fff; border-radius: 12px; border: 1px solid #eee; }
+.concierge-header { display: flex; justify-content: space-between; align-items: center; background-color: #e6f6f7; padding: 1rem 1.5rem; border-radius: 12px 12px 0 0; }
+.view-all-btn { background: #00A3AD; color: #fff; border: none; padding: 0.5rem 1rem; border-radius: 6px; font-weight: 500; }
+.request-form { padding: 1.5rem; }
+.request-form h4 { margin: 0 0 0.75rem; }
+.request-form textarea { width: 100%; min-height: 80px; border: 1px solid #ddd; border-radius: 8px; padding: 0.75rem; margin-bottom: 1rem; }
+.request-actions { display: flex; gap: 1rem; }
+.submit-request-btn, .call-service-btn { flex: 1; padding: 0.8rem; border-radius: 8px; font-weight: 500; font-size: 0.9rem; cursor: pointer; }
+.submit-request-btn { background: #333; color: #fff; border: none; }
+.call-service-btn { background: #fff; border: 1px solid #333; color: #333; }
+.request-section {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+}
+
+.request-heading {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+/* Responsive tweaks */
+@media (max-width: 768px) {
+  .concierge-header {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 0.5rem;
+  }
+
+  .view-all-btn {
+    width: 100%;
+    text-align: center;
+  }
+
+  .request-form {
+    padding: 1rem;
+  }
+
+  .request-actions {
+    flex-direction: column;
+  }
+
+  .submit-request-btn,
+  .call-service-btn {
+    width: 100%;
+  }
+
+  .request-form textarea {
+    min-height: 100px;
+  }
+}
+
+@media (max-width: 480px) {
+  .request-form {
+    padding: 0.75rem;
+  }
+
+  .request-form h4 {
+    font-size: 1rem;
+  }
+
+  .request-form textarea {
+    font-size: 0.9rem;
+  }
+
+  .submit-request-btn,
+  .call-service-btn {
+    font-size: 0.85rem;
+    padding: 0.7rem;
+  }
+
+  .view-all-btn {
+    font-size: 0.85rem;
+    padding: 0.4rem 0.75rem;
+  }
+
+  .request-heading img {
+    width: 18px;
+    height: 18px;
+  }
+
+  .request-heading h4 {
+    font-size: 1rem;
+  }
+}

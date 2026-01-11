@@ -1,0 +1,145 @@
+/* src/pages/UserDetailsPage.css - FINAL & TRULY RESPONSIVE VERSION */
+
+/* --- Base Styles for Desktop --- */
+.details-container {
+  display: flex;
+  width: 100vw;
+  height: 100vh;
+  font-family: 'Poppins', sans-serif;
+  background-color: #fff;
+  overflow: hidden; /* Prevent body scroll on desktop */
+}
+
+.details-left-panel {
+  flex: 0 0 40%;
+  background-size: cover;
+  background-position: center;
+  position: relative;
+  color: white;
+}
+.panel-overlay {
+  background-color: rgba(0, 163, 173, 0.85);
+  position: absolute; top: 0; left: 0; right: 0; bottom: 0;
+  padding: 2.5rem;
+  display: flex;
+  flex-direction: column;
+}
+.details-logo { width: 150px; }
+.details-quote { flex-grow: 1; display: flex; flex-direction: column; justify-content: center; }
+.details-quote .quote-mark { font-size: 4rem; line-height: 1; }
+.details-quote p { font-size: 1.5rem; line-height: 1.6; margin-top: -1rem; }
+
+.details-right-panel {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  height: 100vh;
+  box-sizing: border-box;
+  padding: 2.5rem 3.5rem;
+}
+.form-header {
+  display: flex;
+  justify-content: flex-end;
+  margin-bottom: 1.5rem;
+}
+.menu-icon { color: #00A3AD; stroke-width: 2.5; cursor: pointer; }
+
+.details-form {
+  width: 100%;
+  flex-grow: 1;
+  display: flex;
+  flex-direction: column;
+  overflow-y: auto; /* Scrollbar for form ONLY on desktop */
+  padding-right: 1rem;
+}
+.details-form::-webkit-scrollbar { width: 6px; }
+.details-form::-webkit-scrollbar-thumb { background-color: #ddd; border-radius: 10px; }
+
+.form-row { display: flex; gap: 1.25rem; }
+.form-group { flex: 1; margin-bottom: 1.25rem; }
+.form-group label { display: block; font-size: 0.875rem; color: #888; margin-bottom: 0.5rem; font-weight: 400; }
+.form-group input, .form-group select {
+  width: 100%; padding: 0.9rem 1.25rem; border: 1px solid #E0E0E0; border-radius: 47px !important; font-size: 0.9rem;
+  background-color: #fff; color: #333; font-weight: 500; box-sizing: border-box;
+}
+.form-group select { appearance: none; background-image: url("data:image/svg+xml,..."); /* Your SVG arrow */ background-repeat: no-repeat; background-position: right 1.25rem center; background-size: 1em; padding-right: 3rem; }
+.form-group input:focus, .form-group select:focus { outline: none; border-color: #00A3AD; box-shadow: 0 0 0 3px rgba(0, 163, 173, 0.1); }
+.country-code-group { flex: 0 0 35%; }
+.phone-number-group { margin-top: 1.8rem; }
+.gender-options { display: flex; gap: 0.6rem; }
+.gender-options input[type="radio"] { display: none; }
+.gender-options label { flex: 1; text-align: center; padding: 0.75rem; border: 1px solid #E0E0E0; border-radius: 47px; cursor: pointer; color: #555; background: #fff; font-weight: 500; font-size: 0.875rem; }
+.gender-options input[type="radio"]:checked + label { background-color: #00A3AD; color: white; border-color: #00A3AD; }
+.action-buttons { margin-top: auto; padding-top: 1rem; display: flex; gap: 1rem; }
+.save-btn { flex-grow: 1; padding: 1rem; background-color: #00A3AD; color: white; border: none; border-radius: 47px; font-size: 1rem; font-weight: 500; cursor: pointer; }
+.whatsapp-btn { background-color: #25D366; color: white; padding: 0.75rem 1rem; border-radius: 47px; display: flex; align-items: center; gap: 0.5rem; text-decoration: none; font-weight: 500; font-size: 0.875rem; }
+.whatsapp-btn img { width: 20px; }
+input:-webkit-autofill { -webkit-box-shadow: 0 0 0 40px #F7F8F9 inset !important; -webkit-text-fill-color: #333 !important; }
+
+/*
+=====================================================
+--- NEW, COMPLETE, AND CORRECT RESPONSIVE STYLES ---
+=====================================================
+*/
+
+/* For Tablets and Mobile Phones */
+@media (max-width: 992px) {
+  /* Change the main container to stack vertically and allow scrolling for the whole page */
+  .details-container {
+    flex-direction: column;
+    height: auto; /* Allow the container to grow */
+    overflow-y: auto; /* The WHOLE page scrolls */
+  }
+
+  /* DO NOT HIDE THE LEFT PANEL. Instead, give it a fixed height. */
+  .details-left-panel {
+    flex: none; /* Reset flex properties */
+    width: 100%;
+    height: 45vh; /* 45% of the screen height */
+    min-height: 350px; /* A minimum height for smaller devices */
+  }
+  
+  /* The right panel takes up the rest of the space */
+  .details-right-panel {
+    flex: none;
+    width: 100%;
+    height: auto; /* Let it take its natural height */
+    padding: 2rem;
+  }
+
+  /* The form no longer needs its own scrollbar */
+  .details-form {
+    overflow-y: visible;
+    padding-right: 0;
+  }
+
+  /* Stack buttons on tablets too for a cleaner look */
+  .action-buttons {
+    flex-direction: column-reverse;
+    gap: 0.75rem;
+  }
+  .save-btn, .whatsapp-btn {
+    width: 100%;
+    justify-content: center;
+  }
+}
+
+/* For smaller mobile phones, stack the form rows */
+@media (max-width: 480px) {
+  .details-right-panel {
+    padding: 1.5rem;
+  }
+
+  .form-row {
+    flex-direction: column;
+    gap: 0;
+  }
+
+  .form-group {
+    margin-bottom: 1rem;
+  }
+
+  .phone-number-group {
+    margin-top: 0;
+  }
+}   

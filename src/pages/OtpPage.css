@@ -1,0 +1,209 @@
+/* src/pages/OtpPage.css - FINAL RESPONSIVE VERSION */
+
+.otp-page-container {
+  width: 100vw;
+  height: 100vh;
+  background-size: cover;
+  background-position: center;
+  position: relative;
+  font-family: 'Poppins', sans-serif;
+}
+
+.screen-overlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgb(64 169 175 / 85%);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  color: white;
+  /* स्मूथ स्क्रॉलिंग के लिए अगर कंटेंट ज्यादा हो जाए */
+  overflow-y: auto; 
+}
+
+.content-wrapper {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 100%;
+  max-width: 950px;
+  padding: 20px;
+}
+
+.panel {
+  flex: 1;
+  padding: 40px;
+}
+
+.quote-panel {
+  text-align: left;
+}
+
+.quote-icon {
+  font-family: serif;
+  font-size: 100px;
+  font-weight: bold;
+  line-height: 0.5;
+  color: rgba(255, 255, 255, 0.6);
+  margin-bottom: 25px;
+}
+
+.quote-text {
+  font-size: 32px;
+  font-weight: 500;
+  line-height: 1.5;
+}
+
+.separator {
+  width: 1px;
+  height: 300px;
+  background: rgba(255, 255, 255, 0.2);
+  align-self: center; /* इसे वर्टिकली सेंटर में रखने के लिए */
+}
+
+.form-panel {
+  text-align: left;
+}
+
+.form-panel h2 {
+  font-size: 26px;
+  font-weight: 600;
+}
+
+.form-panel .subtitle {
+  font-size: 16px;
+  color: rgba(255, 255, 255, 0.7);
+  margin-top: 5px;
+  margin-bottom: 40px;
+}
+
+.continue-btn {
+  width: 100%;
+  padding: 16px;
+  background: white;
+  color: #123436;
+  border: none;
+  border-radius: 12px;
+  font-size: 18px;
+  font-weight: 600;
+  cursor: pointer;
+  transition: transform 0.2s, background-color 0.2s;
+  margin-top: 15px;
+}
+
+.continue-btn:hover {
+  transform: scale(1.02);
+  background-color: #00a3ad;
+}
+
+/* --- OTP Specific Styles --- */
+.otp-input-container {
+  display: flex;
+  justify-content: space-between;
+  gap: 15px;
+  margin: 40px 0;
+}
+
+.otp-input {
+  width: 50px;
+  height: 50px;
+  border-radius: 50%;
+  border: 1px solid rgba(255, 255, 255, 0.4);
+  background: transparent;
+  color: white;
+  font-size: 24px;
+  font-weight: 600;
+  text-align: center;
+  outline: none;
+  transition: border-color 0.2s, transform 0.2s;
+}
+
+.otp-input:focus {
+  border-color: white;
+  transform: scale(1.1); /* फोकस पर थोड़ा बड़ा दिखेगा */
+}
+
+.resend-container {
+  text-align: center;
+  margin-top: 25px;
+  min-height: 24px; /* लेआउट शिफ्ट से बचने के लिए */
+}
+
+.resend-text, .resend-success {
+  color: rgba(255, 255, 255, 0.7);
+}
+
+.resend-text a {
+  color: white;
+  font-weight: 600;
+  text-decoration: none;
+}
+
+.resend-text a:hover {
+  text-decoration: underline;
+}
+
+.resend-success {
+  color: #c8ffc8; /* हल्के हरे रंग में सफलता का संदेश */
+  font-weight: 500;
+}
+
+.timer-text {
+  color: rgba(255, 255, 255, 0.9);
+  font-weight: 500;
+}
+
+
+/* --- Responsive Design for Mobile --- */
+/* यह तब लागू होगा जब स्क्रीन की चौड़ाई 768px या उससे कम हो */
+@media (max-width: 768px) {
+  .content-wrapper {
+    /* पैनल को एक के नीचे एक दिखाएगा */
+    flex-direction: column;
+    text-align: center;
+    padding: 20px;
+  }
+
+  .quote-panel {
+    /* मोबाइल पर कोटेशन वाले हिस्से को छिपाना बेहतर है ताकि फॉर्म पर फोकस रहे */
+    display: none; 
+  }
+
+  .separator {
+    /* वर्टिकल लेआउट में सेपरेटर की जरूरत नहीं है */
+    display: none;
+  }
+
+  .form-panel {
+    width: 100%;
+    max-width: 400px; /* फॉर्म की अधिकतम चौड़ाई ताकि यह बहुत ज्यादा न फैले */
+    padding: 20px; /* पैडिंग थोड़ी कम */
+    text-align: center; /* फॉर्म के टेक्स्ट को सेंटर में लाएं */
+  }
+
+  .form-panel .subtitle {
+    margin-bottom: 30px;
+  }
+
+  .otp-input-container {
+    gap: 10px; /* OTP बॉक्स के बीच गैप थोड़ा कम */
+    justify-content: center; /* OTP बॉक्स को सेंटर में लाएं */
+  }
+
+  .otp-input {
+    width: 45px;  /* OTP बॉक्स का साइज थोड़ा छोटा */
+    height: 45px;
+    font-size: 20px;
+  }
+}
+
+/* बहुत छोटे स्क्रीन के लिए अतिरिक्त फाइन-ट्यूनिंग */
+@media (max-width: 380px) {
+    .otp-input {
+        width: 40px;
+        height: 40px;
+    }
+}

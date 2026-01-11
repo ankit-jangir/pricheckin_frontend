@@ -1,0 +1,318 @@
+/* ===============================
+   Feedback Page Layout
+================================ */
+
+.feedback-page-wrapper {
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
+  background-color: #f8f9fa;
+}
+
+.feedback-main {
+  flex-grow: 1;
+  padding: 2.5rem 1.5rem;
+}
+
+.feedback-container {
+  max-width: 800px;
+  margin: 0 auto;
+  display: flex;
+  flex-direction: column;
+  gap: 1.5rem;
+}
+
+/* ===============================
+   Info Bar
+================================ */
+
+.info-bar {
+  background: #bfbfbf;
+  border: 1px solid #eee;
+  padding: 1rem;
+  border-radius: 12px;
+  font-size: 0.9rem;
+  color: #555;
+}
+
+/* ===============================
+   Share Experience Header
+================================ */
+
+.share-experience-section {
+  display: flex;
+  align-items: flex-start;
+  gap: 0.75rem;
+  background: #f5ffca;
+  padding: 1.25rem 1.5rem;
+  border-radius: 12px;
+  margin-bottom: 1.5rem;
+}
+
+/* Back button (react-icons) */
+.share-back-btn {
+  background: none;
+  border: none;
+  cursor: pointer;
+  padding: 0;
+  display: flex;
+  align-items: center;
+  color: #212529;
+  margin-top: 2px;
+}
+
+.share-back-btn svg {
+  font-size: 1.3rem;
+}
+
+.share-back-btn:hover {
+  color: #28a745;
+}
+
+/* Text */
+.share-text h2 {
+  font-size: 1.25rem;
+  margin: 0;
+  font-weight: 600;
+}
+
+.share-text p {
+  color: #555;
+  margin: 0.25rem 0 0;
+  font-size: 0.9rem;
+}
+
+/* ===============================
+   Review Card
+================================ */
+
+.review-card {
+  background: #fff;
+  border: 1px solid #eee;
+  border-radius: 12px;
+  padding: 1.5rem;
+}
+
+.card-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 0.5rem;
+}
+
+.review-card h3 {
+  font-size: 1.1rem;
+  margin: 0;
+}
+
+.recommended-tag {
+  background: #f0f0ff;
+  color: #4f46e5;
+  padding: 0.25rem 0.75rem;
+  border-radius: 15px;
+  font-size: 0.75rem;
+  font-weight: 500;
+}
+
+.card-subtitle {
+  font-size: 0.85rem;
+  color: #888;
+  margin-bottom: 1.5rem;
+}
+
+/* ===============================
+   Google Review Widget
+================================ */
+
+.google-review-widget {
+  border: 1px solid #ddd;
+  border-radius: 8px;
+}
+
+.widget-header {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+  padding: 1rem;
+}
+
+.google-logo {
+  width: 24px;
+}
+
+.widget-header h4 {
+  font-size: 1rem;
+  margin: 0;
+}
+
+.widget-header p {
+  font-size: 0.8rem;
+  margin: 0;
+  color: #888;
+}
+
+.reviews-count {
+  font-size: 14px;
+  color: #333;
+}
+
+.rating-badge {
+  background-color: #5cb338;
+  color: #111;
+  padding: 2px 6px;
+  border-radius: 4px;
+  font-weight: 600;
+  margin-right: 6px;
+}
+
+.widget-thumbnail {
+  width: 100px;
+  height: 87px;
+  object-fit: cover;
+  border-radius: 4px;
+  margin-left: auto;
+}
+
+.widget-body {
+  padding: 1.5rem;
+  text-align: left;
+}
+
+.widget-body h4 {
+  font-size: 0.9rem;
+  margin-bottom: 0.25rem;
+}
+
+.visual-stars {
+  font-size: 2rem;
+  color: #ffc107;
+  margin-bottom: 0.75rem;
+}
+
+.widget-prompt {
+  font-size: 0.8rem;
+  color: #aaa;
+}
+
+.write-review-link {
+  width: 100%;
+  display: block;
+  background: #1a73e8;
+  color: #fff;
+  padding: 0.75rem 1.5rem;
+  border-radius: 6px;
+  text-decoration: none;
+  margin-top: 1rem;
+  font-weight: 500;
+  text-align: center;
+}
+
+/* ===============================
+   Ratings
+================================ */
+
+.rating-group {
+  margin-bottom: 1.5rem;
+}
+
+.rating-group label,
+.rating-item label {
+  display: block;
+  margin-bottom: 0.5rem;
+  font-size: 0.9rem;
+  color: #555;
+}
+
+.rating-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 2rem 3rem;
+}
+
+/* ===============================
+   Comment Section
+================================ */
+
+.comment-section {
+  margin-top: 2rem;
+}
+
+.icon-label {
+  display: flex;
+  align-items: center;
+  gap: 6px;
+  font-weight: 500;
+  margin-bottom: 6px;
+}
+
+.label-icon {
+  width: 16px;
+  height: 16px;
+}
+
+.comment-section textarea {
+  width: 100%;
+  min-height: 100px;
+  border: 1px solid #ddd;
+  border-radius: 8px;
+  padding: 0.75rem;
+  background: #f8f9fa;
+  font-family: inherit;
+}
+
+/* ===============================
+   Buttons
+================================ */
+
+.feedback-actions {
+  display: flex;
+  justify-content: space-between;
+  gap: 1rem;
+  margin-top: 1.5rem;
+}
+
+.cancel-btn {
+  background: #fff;
+  border: 1px solid #aaa;
+  padding: 0.75rem 1.5rem;
+  border-radius: 8px;
+  cursor: pointer;
+}
+
+.submit-btn {
+  background: #fff;
+  border: 1px solid #aaa;
+  padding: 0.75rem 1.25rem;
+  border-radius: 8px;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+
+.btn-icon {
+  width: 16px;
+  height: 16px;
+}
+
+/* ===============================
+   Responsive
+================================ */
+
+@media (max-width: 768px) {
+  .feedback-main {
+    padding: 1.5rem;
+  }
+
+  .rating-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .share-text h2 {
+    font-size: 1.1rem;
+  }
+
+  .share-text p {
+    font-size: 0.85rem;
+  }
+}

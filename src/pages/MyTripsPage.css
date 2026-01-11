@@ -1,0 +1,40 @@
+/* src/pages/MyTripsPage.css - FINAL RESPONSIVE */
+
+.trips-main-content {
+  width: 100%;
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 2.5rem; /* 40px */
+  background-color: #fff;
+  min-height: calc(100vh - 150px); /* Example: Pushes footer down if content is short */
+}
+
+.page-title { font-size: 2rem; margin-bottom: 1.5rem; color: #00A3AD; font-weight: 600; }
+.tabs { margin-bottom: 2.5rem; display: flex; gap: 1.25rem; border-bottom: 1px solid #eaeaea; }
+.tab-btn { background: none; border: none; padding: 0.6rem 0.3rem; margin-bottom: -1px; font-size: 1rem; cursor: pointer; color: #888; font-weight: 500; border-bottom: 2px solid transparent; }
+.tab-btn.active { color: #00A3AD; border-bottom: 2px solid #00A3AD; }
+.trips-grid { display: grid; grid-template-columns: repeat(auto-fill, minmax(320px, 1fr)); gap: 1.875rem; }
+.no-trips-message { color: #888; font-size: 1.125rem; text-align: center; margin-top: 3rem; grid-column: 1 / -1; }
+
+/* --- RESPONSIVE --- */
+@media (max-width: 768px) {
+  .trips-main-content {
+    padding: 1.5rem; /* Less padding on mobile */
+  }
+  .page-title {
+    font-size: 1.75rem; /* Slightly smaller title */
+  }
+  .tabs {
+    gap: 1rem;
+  }
+  .tab-btn {
+    font-size: 0.9rem;
+  }
+}
+
+@media (max-width: 480px) {
+  .trips-grid {
+    grid-template-columns: 1fr; /* Stack cards in a single column */
+    gap: 1.5rem;
+  }
+}

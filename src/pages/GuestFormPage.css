@@ -1,0 +1,460 @@
+/* src/pages/GuestFormPage.css - Updated to match Figma design */
+
+.guest-form-page-wrapper {
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
+  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+}
+
+.guest-form-main {
+  flex-grow: 1;
+  background-color: #f8f9fa;
+  display: flex;
+  justify-content: center;
+  align-items: flex-start;
+  padding: 2rem 1rem;
+}
+
+.guest-form-container {
+  background: white;
+  padding: 2rem;
+  border-radius: 12px;
+  max-width: 800px;
+  width: 100%;
+  position: relative;
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.08);
+  margin: 0 auto;
+  box-sizing: border-box;
+}
+
+.guest-form-header {
+  text-align: center;
+  margin-bottom: 2rem;
+  position: relative;
+}
+
+.guest-form-header h2 {
+  font-size: 1.5rem;
+  font-weight: 600;
+  color: #333;
+  margin-bottom: 0.5rem;
+}
+
+.guest-form-header p {
+  font-size: 0.9rem;
+  color: #666;
+  margin: 0;
+}
+
+.close-btn {
+  position: absolute;
+  top: -10px;
+  right: -10px;
+  background: none;
+  border: none;
+  font-size: 1.8rem;
+  cursor: pointer;
+  color: #999;
+  width: 30px;
+  height: 30px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.close-btn:hover {
+  color: #666;
+}
+
+/* Form Styles */
+.guest-details-form {
+  display: flex;
+  flex-direction: column;
+  gap: 1.5rem;
+}
+
+.form-row {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 1rem;
+}
+
+.form-group {
+  display: flex;
+  flex-direction: column;
+}
+
+.form-group label {
+  font-size: 0.85rem;
+  font-weight: 500;
+  color: #333;
+  margin-bottom: 0.5rem;
+}
+
+.required {
+  color: #e74c3c;
+}
+
+
+
+/* Input Styles - Match Figma */
+.guest-details-form input,
+.guest-details-form select {
+  width: 100%;
+  padding: 0.75rem 1rem;
+  border: 1px solid #e1e5e9;
+      border-radius: 8px !important;
+  font-size: 0.9rem;
+  background-color: #fff;
+  color: #333;
+  box-sizing: border-box;
+  transition: border-color 0.2s ease;
+}
+
+.guest-details-form input:focus,
+.guest-details-form select:focus {
+  outline: none;
+  border-color: #FF6B35;
+  box-shadow: 0 0 0 3px rgba(255, 107, 53, 0.1);
+}
+
+.guest-details-form input::placeholder {
+  color: #999;
+  font-size: 0.9rem;
+}
+
+/* Mobile Input Wrapper */
+.mobile-input-wrapper {
+  display: flex;
+  align-items: center;
+  border: 1px solid #e1e5e9;
+  border-radius: 8px;
+  background-color: #fff;
+  overflow: hidden;
+  transition: border-color 0.2s ease;
+}
+
+.mobile-input-wrapper:focus-within {
+  border-color: #FF6B35;
+  box-shadow: 0 0 0 3px rgba(255, 107, 53, 0.1);
+}
+
+.country-code {
+  padding: 0.75rem 0.5rem 0.75rem 1rem;
+  font-weight: 500;
+  color: #333;
+  border-right: 1px solid #e1e5e9;
+  background-color: #f8f9fa;
+  font-size: 0.9rem;
+}
+
+.mobile-input-wrapper input {
+  border: none;
+  background: transparent;
+  padding: 0.75rem;
+  box-shadow: none;
+}
+
+.mobile-input-wrapper input:focus {
+  box-shadow: none;
+  border: none;
+}
+
+/* Address Row */
+.address-row {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  gap: 0.75rem;
+  margin-bottom: 0.75rem;
+}
+
+/* File Upload Styles - Match Figma */
+.file-upload-container {
+    width: 300px;
+  position: relative;
+}
+
+.file-upload-label {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  border: 1px solid #333;
+  border-radius: 8px;
+  padding: 0.75rem 1rem;
+  cursor: pointer;
+  background-color: #fff;
+  transition: all 0.2s ease;
+  min-height: 20px;
+}
+
+.file-upload-label:hover {
+  background-color: #f8f9fa;
+}
+
+.upload-content {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+}
+
+.upload-icon {
+  width: 16px;
+  height: 16px;
+  color: #333;
+}
+
+.upload-text {
+  font-size: 0.9rem;
+  font-weight: 500;
+  color: #333;
+}
+
+.upload-success {
+  color: #28a745;
+  font-weight: 500;
+  font-size: 0.8rem;
+}
+
+.file-upload-container input[type="file"] {
+  display: none;
+}
+
+.upload-helper-text {
+  font-size: 0.75rem;
+  color: #666;
+  margin-top: 0.5rem;
+  line-height: 1.3;
+}
+
+/* Checkbox Styles - Match Figma */
+.checkbox-container {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+  margin: 1rem 0;
+}
+
+.checkbox-group {
+  display: flex;
+  align-items: flex-start;
+  gap: 0.75rem;
+}
+
+.checkbox-group input[type="checkbox"] {
+  width: 18px;
+  height: 18px;
+  margin: 0;
+  cursor: pointer;
+  accent-color: #00A3AD;
+}
+
+.checkbox-group label {
+  font-size: 0.8rem;
+  color: #666;
+  line-height: 1.4;
+  cursor: pointer;
+  margin: 0;
+}
+
+/* Business Details */
+.business-details {
+  background: #f8f9fa;
+  border-radius: 8px;
+  padding: 1.25rem;
+  border: 1px solid #e1e5e9;
+  margin-top: 1rem;
+}
+
+.business-details h4 {
+  margin: 0 0 1rem 0;
+  font-size: 1rem;
+  font-weight: 600;
+  color: #333;
+}
+
+.business-inputs {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+}
+
+/* Action Buttons - Match Figma */
+.action-buttons-container {
+  display: flex;
+  justify-content: flex-end;
+  gap: 1rem;
+  margin-top: 2rem;
+  padding-top: 1.5rem;
+  border-top: 1px solid #e1e5e9;
+}
+
+.cancel-btn {
+  padding: 0.75rem 1.5rem;
+  border-radius: 8px;
+  border: 1px solid #ccc;
+  background: #fff;
+  cursor: pointer;
+  font-weight: 500;
+  font-size: 0.9rem;
+  color: #666;
+  transition: all 0.2s ease;
+}
+
+.cancel-btn:hover {
+  background-color: #f8f9fa;
+  border-color: #999;
+}
+
+.complete-btn {
+  padding: 0.75rem 1.5rem;
+  border-radius: 8px;
+  border: none;
+  background: #333;
+  color: white;
+  cursor: pointer;
+  font-weight: 500;
+  font-size: 0.9rem;
+  transition: background-color 0.2s ease;
+}
+
+.complete-btn:hover {
+  background: #555;
+}
+
+/* Responsive Design */
+/* Default: Desktop First */
+.guest-form-container {
+  max-width: 800px;
+  width: 100%;
+  margin: 0 auto;
+  padding: 2rem;
+  box-sizing: border-box;
+  border-radius: 12px;
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.08);
+}
+
+.stayed-before-group .radio-options {
+  display: flex;
+  gap: 1.5rem;
+  margin-top: 0.5rem;
+}
+
+.stayed-before-group .radio-options label {
+  font-size: 0.9rem;
+  color: #333;
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+}
+
+.stayed-before-group input[type="radio"] {
+  accent-color: #00A3AD;
+  cursor: pointer;
+  width: 16px;
+  height: 16px;
+}
+
+/* Large Screens (1200px and above) */
+@media (min-width: 1200px) {
+  .guest-form-container {
+    max-width: 1000px;
+    padding: 2.5rem;
+  }
+}
+
+/* Medium Desktops (992px to 1199px) */
+@media (max-width: 1199px) {
+  .guest-form-container {
+    max-width: 900px;
+    padding: 2rem;
+  }
+}
+
+/* Tablets (768px to 991px) */
+@media (max-width: 991px) {
+  .guest-form-main {
+    padding: 1.5rem;
+  }
+
+  .guest-form-container {
+    max-width: 100%;
+    padding: 1.5rem;
+    margin: 0;
+    border-radius: 8px;
+  }
+
+  .form-row,
+  .address-row {
+    grid-template-columns: 1fr;
+    gap: 1rem;
+  }
+
+  .action-buttons-container {
+    flex-direction: column-reverse;
+    gap: 0.75rem;
+  }
+
+  .cancel-btn,
+  .complete-btn {
+    width: 100%;
+  }
+}
+
+/* Mobile Devices (481px to 767px) */
+@media (max-width: 767px) {
+  .guest-form-main {
+    padding: 1rem;
+  }
+
+  .guest-form-container {
+    padding: 1rem;
+    width: 100vw;
+    border-radius: 0;
+    box-shadow: none;
+  }
+
+  .guest-form-header h2 {
+    font-size: 1.25rem;
+  }
+
+  .guest-form-header p {
+    font-size: 0.9rem;
+  }
+
+  .form-row,
+  .address-row {
+    grid-template-columns: 1fr;
+  }
+
+  .checkbox-group {
+    align-items: flex-start;
+  }
+}
+
+/* Small Mobile (max 480px) */
+@media (max-width: 480px) {
+  .guest-form-container {
+    padding: 1rem;
+  }
+
+  .guest-form-header h2 {
+    font-size: 1.1rem;
+  }
+
+  .guest-form-header p {
+    font-size: 0.8rem;
+  }
+
+  .upload-text {
+    font-size: 0.8rem;
+  }
+
+  .file-upload-container {
+    width: 100%;
+  }
+
+  .action-buttons-container {
+    padding-top: 1rem;
+  }
+}

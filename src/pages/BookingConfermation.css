@@ -1,0 +1,229 @@
+/* src/pages/BookingConfermation.css */
+
+.stay-experience-wrapper {
+  background-color: #f8f9fa;
+  min-height: 100vh;
+}
+
+.stay-experience-main {
+  max-width: 1400px;
+  margin: 0 auto;
+  padding: 2.5rem;
+}
+
+/* ===== Welcome Header ===== */
+.welcome-header {
+  margin-bottom: 2rem;
+}
+
+.welcome-header-left {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+}
+
+.back-button {
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  border: 1px solid #ddd;
+  background: #fff;
+  cursor: pointer;
+  font-size: 1.2rem;
+}
+
+.welcome-header h1 {
+  font-size: 1.8rem;
+  margin: 0;
+}
+
+.welcome-header p {
+  color: #666;
+  margin: 0.25rem 0 0;
+}
+
+/* ===== Feedback Bar ===== */
+.feedback-bar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background: #e6f6f7;
+  border: 1px solid #cceef0;
+  padding: 1.5rem 2rem;
+  border-radius: 16px;
+  margin-bottom: 2rem;
+}
+
+.take-action-tag {
+  background: #00a3ad;
+  color: #fff;
+  padding: 0.35rem 0.85rem;
+  border-radius: 20px;
+  font-size: 0.8rem;
+}
+
+.feedback-bar h3 {
+  margin: 0.75rem 0 0.25rem;
+}
+
+.feedback-bar p {
+  margin: 0;
+  color: #555;
+}
+
+.feedback-btn {
+  background: #008281;
+  color: #fff;
+  border-radius: 12px;
+  padding: 0.75rem 1rem;
+  border: none;
+  cursor: pointer;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.feedback-text {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  font-weight: 600;
+}
+
+.feedback-offer {
+  font-size: 0.75rem;
+  opacity: 0.85;
+}
+
+/* ===== Guest Check-In Status ===== */
+.checkin-status-card {
+  background: #fff;
+  border: 1px solid #e6e6e6;
+  border-radius: 16px;
+  padding: 1.5rem;
+  margin-bottom: 1.5rem;
+  /* margin-top: 0.5rem; */
+}
+
+.checkin-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.checkin-header h3 {
+  margin: 0;
+  font-size: 1.1rem;
+}
+
+.checkin-percentage {
+  color: #008281;
+  font-weight: 600;
+}
+
+.progress-bar {
+  height: 8px;
+  background: #e9ecef;
+  border-radius: 8px;
+  overflow: hidden;
+  margin: 1rem 0;
+}
+
+.progress-fill {
+  width: 25%;
+  height: 100%;
+  background: #008281;
+}
+
+.checkin-list {
+  display: flex;
+  flex-direction: column;
+  gap: 0.75rem;
+}
+
+.checkin-item {
+  display: flex;
+  align-items: center;
+  gap: 0.6rem;
+  font-size: 0.9rem;
+  color: #555;
+}
+
+.checkin-item.checked {
+  font-weight: 500;
+  color: #222;
+}
+
+.checkin-item input {
+  accent-color: #008281;
+}
+
+/* ===== Dashboard ===== */
+.dashboard-layout {
+  display: grid;
+  grid-template-columns: 2fr 1fr;
+  gap: 2rem;
+  align-items: start;
+}
+
+
+/* ===== Responsive ===== */
+@media (max-width: 992px) {
+   .back-button {
+  width: 40px;
+  height: 40px;
+}
+.dashboard-layout {
+    display: flex;
+    flex-direction: column;
+    align-items: center;  
+    gap: 2rem;
+  }
+
+  .left-column,
+  .right-column {
+    width: 100%;
+    max-width: 720px;
+    margin: 0 auto;  
+  }
+  .feedback-bar {
+    flex-direction: column;
+    gap: 1rem;
+    align-items: stretch;
+  }
+
+  .feedback-btn {
+    width: 100%;
+  }
+}
+
+@media (max-width: 768px) {
+  .stay-experience-main {
+    padding: 1.25rem 1rem;
+  }
+
+  .welcome-header h1 {
+    font-size: 1.4rem;
+  }
+   .back-button {
+  width: 40px;
+  height: 40px;
+}
+}
+.right-column {
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+}
+@media (max-width: 576px) {
+  .left-column,
+  .right-column {
+    max-width: 100%;
+    padding-left: 0;
+    padding-right: 0;
+  }
+  .back-button {
+  width: 50px;
+  height: 35px;
+}
+}

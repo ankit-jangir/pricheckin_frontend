@@ -1,0 +1,53 @@
+/* src/index.css - FINAL RESPONSIVE VERSION */
+
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&display=swap');
+
+/* --- 1. A Modern CSS Reset --- */
+/* This removes default browser styles for a consistent look */
+*, *::before, *::after {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+/* --- 2. Responsive Typography Foundation --- */
+/* This makes it easy for our font sizes to scale down on smaller devices */
+html {
+  font-size: 100%; /* Default: 1rem = 16px */
+}
+
+/* For tablets and smaller desktops */
+@media (max-width: 992px) {
+  html {
+    font-size: 93.75%; /* 1rem = 15px */
+  }
+}
+
+/* For mobile phones */
+@media (max-width: 768px) {
+  html {
+    font-size: 87.5%; /* 1rem = 14px */
+  }
+}
+
+/* --- 3. Default Body Styles --- */
+/* These styles are the base for the entire application */
+body {
+  font-family: 'Poppins', sans-serif;
+  color: #212529; /* Default text color */
+  background-color: #fff; /* We'll set specific page backgrounds in their own CSS */
+  line-height: 1.5; /* Improves readability */
+  -webkit-font-smoothing: antialiased; /* Makes fonts look smoother on Mac */
+}
+
+/* --- 4. Fluid Images and Media --- */
+/* This prevents images from overflowing their containers on small screens */
+img, picture, video, canvas, svg {
+  display: block;
+  max-width: 100%;
+}
+
+/* --- 5. A simple rule for focus states for better accessibility --- */
+input, button, textarea, select {
+  font: inherit; /* Makes form elements inherit the body's font */
+}

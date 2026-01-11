@@ -1,0 +1,50 @@
+/* src/components/Footer/Footer.css - FINAL RESPONSIVE */
+
+.main-footer {
+  background-color: #00A3AD;
+  color: white;
+  padding: 3.75rem 5rem 1.25rem;
+}
+.footer-content {
+  display: flex;
+  gap: 3.75rem;
+  padding-bottom: 2.5rem;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.2);
+}
+.footer-left { flex: 1; }
+.footer-right { flex: 2; display: flex; justify-content: space-between; gap: 2rem; }
+.footer-logo { width: 180px; margin-bottom: 1.25rem; filter: brightness(0) invert(1); }
+.footer-left h2 { font-size: 1.5rem; font-weight: 500; line-height: 1.4; margin-bottom: 0.6rem; }
+.footer-left p { color: rgba(255, 255, 255, 0.8); font-size: 0.9rem; margin-bottom: 1.8rem; }
+.social-icons { display: flex; gap: 1rem; }
+.social-icons img { width: 24px; height: 24px; }
+.footer-links-column h4 { font-size: 1rem; font-weight: 600; margin-bottom: 1.25rem; }
+.footer-links-column a { display: block; color: rgba(255, 255, 255, 0.8); text-decoration: none; margin-bottom: 0.75rem; font-size: 0.9rem; }
+.footer-bottom { display: flex; justify-content: space-between; align-items: center; padding-top: 1.25rem; font-size: 0.875rem; color: rgba(255, 255, 255, 0.8); flex-wrap: wrap; gap: 1rem; }
+.footer-bottom a { color: white; text-decoration: none; }
+.footer-bottom a:hover { text-decoration: underline; }
+.whatsapp-btn { background-color: #25D366; padding: 0.6rem 1.1rem; border-radius: 50px; display: flex; align-items: center; gap: 0.6rem; text-decoration: none; color: white; font-size: 0.9rem; font-weight: 500; }
+.whatsapp-btn img { width: 22px; }
+
+/* --- RESPONSIVE --- */
+@media (max-width: 992px) {
+  .main-footer {
+    padding: 3rem 2.5rem 1.5rem;
+  }
+  .footer-content {
+    flex-direction: column; /* Stack left and right sections */
+  }
+  .footer-right {
+    flex-direction: column;
+  }
+  .footer-links-column {
+      margin-bottom: 2rem;
+  }
+}
+
+@media (max-width: 768px) {
+  .footer-bottom {
+    flex-direction: column; /* Stack copyright and links */
+    text-align: center;
+  }
+}
